@@ -1,7 +1,7 @@
 using Application;
 using Application.Common.Exceptions.Filter;
 using Infrastructure;
-using Infrastructure.Interfaces;
+using Infrastructure.Migrations;
 using LangVault.Admin;
 
 try
@@ -10,6 +10,7 @@ try
     builder.Services.AddApplication();
     builder.Services.AddAdmin();
     builder.Services.AddInfrastructure(builder.Configuration);
+    builder.Services.AddMigrations(builder.Configuration);
 
     builder.Services.AddControllers(options => options.Filters.Add(new ApiExceptionFilter()));
     builder.Services.AddCors(options =>
@@ -29,11 +30,6 @@ try
     {
         app.UseSwagger();
         app.UseSwaggerUI();
-
-        using var scope = app.Services.CreateScope();
-        var initialiser = scope.ServiceProvider.GetRequiredService<IInitialiser>();
-        await initialiser.InitialiseAsync();
-        await initialiser.SeedAsync();
     }
 
     app.UseHttpsRedirection();

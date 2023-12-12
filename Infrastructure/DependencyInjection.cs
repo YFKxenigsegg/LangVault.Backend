@@ -1,5 +1,4 @@
 ﻿using Infrastructure.Interceptors;
-using Infrastructure.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -10,18 +9,18 @@ public static class DependencyInjection
     {
         services.AddSingleton<AuditableInterceptor>();
         services.AddDbContextFactory<ApplicationDbContext>((sp, options) =>
-            options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"))
+            options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"),
+            x => x.MigrationsAssembly("Infrastructure.Migrations"))
             .AddInterceptors(sp.GetRequiredService<AuditableInterceptor>()));
         services.AddScoped(options =>
             options.GetRequiredService<IDbContextFactory<ApplicationDbContext>>()
             .CreateDbContext());
-        services.AddScoped<IInitialiser, ApplicationDbContextInitialiser>();
         var sp = services.BuildServiceProvider();
         using var scope = sp.CreateScope();
         var scopedService = scope.ServiceProvider;
         var dbContext = scopedService.GetRequiredService<IDbContextFactory<ApplicationDbContext>>();
         using var db = dbContext.CreateDbContext();
-        db.Database.EnsureCreated();
+        db.Database.Migrate();
         return services;
     }
 }

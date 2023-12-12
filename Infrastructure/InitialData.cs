@@ -26,19 +26,17 @@ public static class InitialData
             ];
         Tags =
             [
-
-                // change colors
                 new() { Value = "Noun", Color = "#8A2BE2", LinguisticElementType = (int)Domain.Enums.LinguisticElementType.Word, Priority = 0 },
-                new() { Value = "Pronoun", Color = "#8A2BE2", LinguisticElementType = (int)Domain.Enums.LinguisticElementType.Word, Priority = 1 },
-                new() { Value = "Adjective", Color = "#8A2BE2", LinguisticElementType = (int)Domain.Enums.LinguisticElementType.Word, Priority = 2 },
-                new() { Value = "Verb", Color = "#8A2BE2", LinguisticElementType = (int)Domain.Enums.LinguisticElementType.Word, Priority = 3 },
-                new() { Value = "Adverb", Color = "#8A2BE2", LinguisticElementType = (int)Domain.Enums.LinguisticElementType.Word, Priority = 4 },
-                new() { Value = "Preposition", Color = "#8A2BE2", LinguisticElementType = (int)Domain.Enums.LinguisticElementType.Word, Priority = 5 },
-                new() { Value = "Conjunction", Color = "#8A2BE2", LinguisticElementType = (int)Domain.Enums.LinguisticElementType.Word, Priority = 6 },
-                new() { Value = "Interjection", Color = "#8A2BE2", LinguisticElementType = (int)Domain.Enums.LinguisticElementType.Word, Priority = 7 },
-                new() { Value = "Phrasal Verb", Color = "#8A2BE2", LinguisticElementType = (int)Domain.Enums.LinguisticElementType.Construct, Priority = 8 },
-                new() { Value = "Idiom", Color = "#8A2BE2", LinguisticElementType = (int)Domain.Enums.LinguisticElementType.Construct, Priority = 9 },
-                new() { Value = "Collocation", Color = "#8A2BE2", LinguisticElementType = (int)Domain.Enums.LinguisticElementType.Construct, Priority = 10 },
+                new() { Value = "Pronoun", Color = "#DC143C", LinguisticElementType = (int)Domain.Enums.LinguisticElementType.Word, Priority = 1 },
+                new() { Value = "Adjective", Color = "#FF8C00", LinguisticElementType = (int)Domain.Enums.LinguisticElementType.Word, Priority = 2 },
+                new() { Value = "Verb", Color = "#32CD32", LinguisticElementType = (int)Domain.Enums.LinguisticElementType.Word, Priority = 3 },
+                new() { Value = "Adverb", Color = "#FFD700", LinguisticElementType = (int)Domain.Enums.LinguisticElementType.Word, Priority = 4 },
+                new() { Value = "Preposition", Color = "#8B008B", LinguisticElementType = (int)Domain.Enums.LinguisticElementType.Word, Priority = 5 },
+                new() { Value = "Conjunction", Color = "#B22222", LinguisticElementType = (int)Domain.Enums.LinguisticElementType.Word, Priority = 6 },
+                new() { Value = "Interjection", Color = "#20B2AA", LinguisticElementType = (int)Domain.Enums.LinguisticElementType.Word, Priority = 7 },
+                new() { Value = "Phrasal Verb", Color = "#FF69B4", LinguisticElementType = (int)Domain.Enums.LinguisticElementType.Construct, Priority = 8 },
+                new() { Value = "Idiom", Color = "#483D8B", LinguisticElementType = (int)Domain.Enums.LinguisticElementType.Construct, Priority = 9 },
+                new() { Value = "Collocation", Color = "#6A5ACD", LinguisticElementType = (int)Domain.Enums.LinguisticElementType.Construct, Priority = 10 },
             ];
     }
 }
