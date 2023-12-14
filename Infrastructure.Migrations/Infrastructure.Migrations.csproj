@@ -7,6 +7,58 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Scripts\Drops\Adjectives.sql" />
+    <None Remove="Scripts\Drops\Adverbs.sql" />
+    <None Remove="Scripts\Drops\Collocations.sql" />
+    <None Remove="Scripts\Drops\Conjunctions.sql" />
+    <None Remove="Scripts\Drops\Idioms.sql" />
+    <None Remove="Scripts\Drops\Interjections.sql" />
+    <None Remove="Scripts\Drops\Nouns.sql" />
+    <None Remove="Scripts\Drops\PhrasalVerbs.sql" />
+    <None Remove="Scripts\Drops\Prepositions.sql" />
+    <None Remove="Scripts\Drops\Pronouns.sql" />
+    <None Remove="Scripts\Drops\Verbs.sql" />
+    <None Remove="Scripts\Views\Adjectives.sql" />
+    <None Remove="Scripts\Views\Adverbs.sql" />
+    <None Remove="Scripts\Views\Collocations.sql" />
+    <None Remove="Scripts\Views\Conjunctions.sql" />
+    <None Remove="Scripts\Views\Idioms.sql" />
+    <None Remove="Scripts\Views\Interjections.sql" />
+    <None Remove="Scripts\Views\Nouns.sql" />
+    <None Remove="Scripts\Views\PhrasalVerbs.sql" />
+    <None Remove="Scripts\Views\Prepositions.sql" />
+    <None Remove="Scripts\Views\Pronouns.sql" />
+    <None Remove="Scripts\Views\Verbs.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\Drops\Adjectives.sql" />
+    <EmbeddedResource Include="Scripts\Drops\Adverbs.sql" />
+    <EmbeddedResource Include="Scripts\Drops\Collocations.sql" />
+    <EmbeddedResource Include="Scripts\Drops\Conjunctions.sql" />
+    <EmbeddedResource Include="Scripts\Drops\Idioms.sql" />
+    <EmbeddedResource Include="Scripts\Drops\Interjections.sql" />
+    <EmbeddedResource Include="Scripts\Drops\Nouns.sql" />
+    <EmbeddedResource Include="Scripts\Drops\PhrasalVerbs.sql" />
+    <EmbeddedResource Include="Scripts\Drops\Prepositions.sql" />
+    <EmbeddedResource Include="Scripts\Drops\Pronouns.sql" />
+    <EmbeddedResource Include="Scripts\Drops\Verbs.sql" />
+    <EmbeddedResource Include="Scripts\Views\Adjectives.sql" />
+    <EmbeddedResource Include="Scripts\Views\Adverbs.sql" />
+    <EmbeddedResource Include="Scripts\Views\Collocations.sql" />
+    <EmbeddedResource Include="Scripts\Views\Conjunctions.sql" />
+    <EmbeddedResource Include="Scripts\Views\Idioms.sql" />
+    <EmbeddedResource Include="Scripts\Views\Interjections.sql" />
+    <EmbeddedResource Include="Scripts\Views\Nouns.sql">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\Views\PhrasalVerbs.sql" />
+    <EmbeddedResource Include="Scripts\Views\Prepositions.sql" />
+    <EmbeddedResource Include="Scripts\Views\Pronouns.sql" />
+    <EmbeddedResource Include="Scripts\Views\Verbs.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentMigrator" Version="5.0.0" />
     <PackageReference Include="FluentMigrator.Runner.Postgres" Version="5.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />

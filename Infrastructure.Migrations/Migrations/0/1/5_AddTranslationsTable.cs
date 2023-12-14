@@ -12,7 +12,6 @@ public class AddTranslationsTable : Migration
              .WithColumn("WordId").AsInt32().Nullable()
                  .ForeignKey("FK_Translations_Words_WordId", "Words", "Id").OnDelete(Rule.Cascade)
                  .Indexed("IX_Translations_WordId")
-             .WithColumn("Type").AsInt32().NotNullable()
              .WithColumn("CreatedBy").AsFixedLengthString(16).Nullable()
              .WithColumn("CreatedUtc").AsDateTimeOffset().NotNullable()
              .WithColumn("ModifiedUtc").AsDateTimeOffset().Nullable()

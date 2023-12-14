@@ -6,7 +6,9 @@ public static class DependencyInjection
         services.AddFluentMigratorCore()
             .ConfigureRunner(config => config.AddPostgres()
                 .WithGlobalConnectionString(configuration.GetConnectionString("DefaultConnection"))
-                .ScanIn(Assembly.GetExecutingAssembly()).For.Migrations());
+                .ScanIn(Assembly.GetExecutingAssembly())
+                    .For.Migrations()
+                    .For.EmbeddedResources());
         var sp = services.BuildServiceProvider();
         using var scope = sp.CreateScope();
         var scopedService = scope.ServiceProvider;
