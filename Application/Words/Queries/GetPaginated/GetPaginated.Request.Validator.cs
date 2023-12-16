@@ -3,10 +3,9 @@ public class GetPaginatedRequestValidator : AbstractValidator<GetPaginatedReques
 {
     public GetPaginatedRequestValidator()
     {
-        // 415 on client side
-        //RuleFor(x => x.PageSize) 
-        //    .GreaterThan(1).WithMessage("Invalid \"PageSize\".");
-        //RuleFor(x => x.PageNumber)
-        //    .GreaterThan(1).WithMessage("Invalid \"PageNumber\".");
+        RuleFor(x => x.PageSize)
+            .GreaterThan(0).WithMessage("Invalid \"PageSize\".");
+        RuleFor(x => x.PageNumber)
+            .GreaterThan(0).WithMessage("Invalid \"PageNumber\".");
     }
 }

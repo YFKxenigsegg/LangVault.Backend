@@ -9,7 +9,6 @@ public class GetPaginatedHanler(IDbContextFactory<ApplicationDbContext> dbContex
     {
         using var dbContext = await _dbContextFactory.CreateDbContextAsync(cancellationToken);
         return await dbContext.Constructs
-            .Where(x => x.Type == request.Type)
             .OrderByDescending(x => x.CreatedUtc)
             .ProjectTo<ConstructInfo>(_mapper.ConfigurationProvider)
             .PaginatedListAsync(request.PageNumber, request.PageSize);

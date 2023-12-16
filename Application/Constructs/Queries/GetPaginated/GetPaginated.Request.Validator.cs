@@ -4,8 +4,8 @@ public class GetPaginatedRequestValidator : AbstractValidator<GetPaginatedReques
     public GetPaginatedRequestValidator()
     {
         RuleFor(x => x.PageSize)
-            .GreaterThan(1).WithMessage("Invalid \"PageSize\".");
+            .GreaterThan(0).WithMessage("Invalid \"PageSize\".");
         RuleFor(x => x.PageNumber)
-            .GreaterThan(1).WithMessage("Invalid \"PageNumber\".");
+            .GreaterThan(0).WithMessage("Invalid \"PageNumber\".");
     }
 }
