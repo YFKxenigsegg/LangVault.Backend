@@ -2,6 +2,7 @@
 public class SearchRequest<TEntity, TResponse> : IRequest<PaginatedList<TResponse>>
 {
     public string? Value { get; set; }
+    public int? Type { get; set; }
     public string OrderBy { get; set; } = SearchDefaults.OrderBy;
     public bool Ascending { get; set; } = SearchDefaults.Ascending;
     public int PageNumber { get; set; } = SearchDefaults.PageNumber;

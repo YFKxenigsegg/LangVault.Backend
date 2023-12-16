@@ -20,6 +20,6 @@ public class CreateRequestValidator : AbstractValidator<CreateRequest>
     {
         using var dbContext = await _dbContextFactory.CreateDbContextAsync(cancellationToken);
         return !(await dbContext.Words
-            .AnyAsync(x => x.Value == value && x.Type == request.Type, cancellationToken));
+            .AnyAsync(x => x.Value == value && x.Type == (int)request.Type, cancellationToken));
     }
 }
