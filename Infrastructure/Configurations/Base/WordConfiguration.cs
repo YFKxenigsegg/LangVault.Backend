@@ -1,6 +1,4 @@
-﻿using Domain.Consts;
-
-namespace Infrastructure.Configurations.Base;
+﻿namespace Infrastructure.Configurations.Base;
 public class WordConfiguration : LinguisticElementConfiguration<Word>
 {
     public override void Configure(EntityTypeBuilder<Word> builder)
@@ -10,7 +8,7 @@ public class WordConfiguration : LinguisticElementConfiguration<Word>
         builder.ToTable("Words");
 
         builder.Property(x => x.Value)
-            .HasMaxLength(TextUtilities.MaxWordLength)
+            .HasMaxLength(LengthConstraints.MaxWordLength)
             .IsRequired();
 
         builder.Property(x => x.Type)

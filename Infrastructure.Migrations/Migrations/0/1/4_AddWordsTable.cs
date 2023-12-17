@@ -10,10 +10,10 @@ public class AddWordsTable : Migration
                 .ForeignKey("FK_Words_Constructs_ConstructId", "Constructs", "Id")
                 .Indexed("IX_Words_ConstructId")
             .WithColumn("Type").AsInt32().NotNullable()
-            .WithColumn("CreatedBy").AsFixedLengthString(16).Nullable()
+            .WithColumn("CreatedBy").AsString(16).Nullable()
             .WithColumn("CreatedUtc").AsDateTimeOffset().NotNullable()
             .WithColumn("ModifiedUtc").AsDateTimeOffset().Nullable()
-            .WithColumn("Value").AsFixedLengthString(32).NotNullable();
+            .WithColumn("Value").AsString(16).NotNullable();
 
         Create.Index("IX_Words_Value_Type")
            .OnTable("Words")

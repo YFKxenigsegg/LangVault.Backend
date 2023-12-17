@@ -10,13 +10,13 @@ public class AddMasterdataTables : Migration
             .WithColumn("Id").AsInt32().PrimaryKey("PK_Tags").Identity()
             .WithColumn("Value").AsString().NotNullable()
                 .Unique("IX_Tags_Value")
-            .WithColumn("Color").AsFixedLengthString(7).NotNullable()
+            .WithColumn("Color").AsString(7).NotNullable()
             .WithColumn("LinguisticElementType").AsInt32().NotNullable()
             .WithColumn("Priority").AsInt32().NotNullable();
 
         Create.Table("WordTypes")
             .WithColumn("Id").AsInt32().PrimaryKey("PK_WordTypes").Identity()
-            .WithColumn("Name").AsFixedLengthString(16).NotNullable()
+            .WithColumn("Name").AsString(16).NotNullable()
             .WithColumn("Value").AsInt32().NotNullable()
                 .Unique("IX_WordTypes_Value");
 

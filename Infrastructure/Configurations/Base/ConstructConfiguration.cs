@@ -10,7 +10,7 @@ public class ConstructConfiguration : LinguisticElementConfiguration<Construct>
         builder.ToTable("Constructs");
 
         builder.Property(x => x.Value)
-            .HasMaxLength(TextUtilities.MaxConstructLength)
+            .HasMaxLength(LengthConstraints.MaxConstructLength)
             .IsRequired();
 
         builder.Property(x => x.Type)

@@ -15,7 +15,7 @@ public class UpdateRequestValidator : AbstractValidator<UpdateRequest>
 
         RuleFor(x => x.Value)
             .NotEmpty().WithMessage("\"Value\" is required.")
-            .MaximumLength(TextUtilities.MaxWordLength).WithMessage($"\"Value\" must not exceed {TextUtilities.MaxWordLength} characters.")
+            .MaximumLength(LengthConstraints.MaxWordLength).WithMessage($"\"Value\" must not exceed {LengthConstraints.MaxWordLength} characters.")
             .MustAsync(BeUniqueWordAsync).WithMessage("The specified \"Word\" already exists.");
     }
 

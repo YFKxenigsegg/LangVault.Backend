@@ -12,7 +12,7 @@ public class CreateRequestValidator : AbstractValidator<CreateRequest>
 
         RuleFor(x => x.Value)
             .NotEmpty().WithMessage("\"Value\" is required.")
-            .MaximumLength(TextUtilities.MaxConstructLength).WithMessage($"\"Value\" must not exceed {TextUtilities.MaxConstructLength} characters.")
+            .MaximumLength(LengthConstraints.MaxConstructLength).WithMessage($"\"Value\" must not exceed {LengthConstraints.MaxConstructLength} characters.")
             .MustAsync(BeUniqueConstructAsync).WithMessage("The specified \"Value\" already exists.");
     }
 

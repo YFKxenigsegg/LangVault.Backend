@@ -12,10 +12,10 @@ public class AddTranslationsTable : Migration
              .WithColumn("WordId").AsInt32().Nullable()
                  .ForeignKey("FK_Translations_Words_WordId", "Words", "Id").OnDelete(Rule.Cascade)
                  .Indexed("IX_Translations_WordId")
-             .WithColumn("CreatedBy").AsFixedLengthString(16).Nullable()
+             .WithColumn("CreatedBy").AsString(16).Nullable()
              .WithColumn("CreatedUtc").AsDateTimeOffset().NotNullable()
              .WithColumn("ModifiedUtc").AsDateTimeOffset().Nullable()
-            .WithColumn("Value").AsFixedLengthString(64).NotNullable();
+            .WithColumn("Value").AsString(64).NotNullable();
     }
 
     public override void Down()

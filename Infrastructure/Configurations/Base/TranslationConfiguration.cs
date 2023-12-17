@@ -8,7 +8,7 @@ public class TranslationConfiguration : BaseAuditableEntityConfiguration<Transla
         builder.ToTable("Translations");
 
         builder.Property(x => x.Value)
-            .HasMaxLength(64)
+            .HasMaxLength(LengthConstraints.MaxTranslationLength)
             .IsRequired();
     }
 }

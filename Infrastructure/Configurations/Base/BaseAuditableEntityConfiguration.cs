@@ -9,7 +9,7 @@ public class BaseAuditableEntityConfiguration<T> : BaseEntityConfiguration<T>
         builder.UseTpcMappingStrategy();
 
         builder.Property(x => x.CreatedBy)
-            .HasMaxLength(16)
+            .HasMaxLength(LengthConstraints.MaxCreatedByLength)
             .IsRequired(false);
 
         builder.Property(x => x.CreatedUtc)
