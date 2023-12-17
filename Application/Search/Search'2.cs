@@ -14,7 +14,7 @@ public class SearchHandler<TEntity, TResponse>(IDbContextFactory<ApplicationDbCo
         using var dbContext = await _dbContextFactory.CreateDbContextAsync(cancellationToken);
         return await dbContext.Set<TEntity>()
             .ApplyFilter(request)
-            .ApplyOrder(request.OrderBy, request.Ascending)
+            .ApplyOrder(request.OrderBy, request.Order)
             .ProjectTo<TResponse>(_mapper.ConfigurationProvider)
             .PaginatedListAsync(request.PageNumber, request.PageSize);
     }
