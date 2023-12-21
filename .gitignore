@@ -339,12 +339,11 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 
-
-
-
-
 [Ll]ogs/
 
 
 NLog.config
 appsettings.json
+
+# docker
+.containers

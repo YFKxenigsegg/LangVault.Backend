@@ -1,0 +1,44 @@
+version: '3.4'
+
+networks:
+  dev:
+    driver: bridge
+
+services:
+  langvault.admin:
+    image: docker.io/library/langvault.admin
+    container_name: Admin
+    depends_on:
+      - "langvault.db"
+    ports:
+      - "8081:80"
+    restart: always
+    build:
+      context: .
+      dockerfile: LangVault.Admin/Dockerfile
+    networks:
+      - dev
+
+  langvault.db:
+    image: postgres:latest
+    container_name: Database
+    environment:
+      - POSTGRES_DB=LangVault
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgre123
+    volumes:
+      - ./.containers/database:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    restart: always
+
+  langvault.mq:
+    image: rabbitmq:3.12.10-management
+    container_name: Queue
+    hostname: langvault-queue
+    volumes:
+      - ./.containers/queue/data:/var/lib/rabbitmq
+      - ./.containers/queue/log/:/var/log/rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
