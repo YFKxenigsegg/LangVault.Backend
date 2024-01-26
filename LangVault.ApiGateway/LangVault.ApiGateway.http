@@ -1,0 +1,6 @@
+@LangVault.ApiGateway_HostAddress = http://localhost:5287
+
+GET {{LangVault.ApiGateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

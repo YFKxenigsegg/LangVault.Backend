@@ -1,0 +1,14 @@
+﻿global using AutoMapper;
+global using AutoMapper.QueryableExtensions;
+global using FluentValidation;
+global using FluentValidation.Results;
+global using LangVault.Management.Application.Common.Exceptions;
+global using LangVault.Management.Application.Common.Mappings;
+global using LangVault.Management.Application.Common.Models;
+global using LangVault.Management.Domain.Consts;
+global using LangVault.Management.Domain.Entities.Base;
+global using LangVault.Management.Domain.Enums;
+global using LangVault.Management.Infrastructure;
+global using MediatR;
+global using Microsoft.EntityFrameworkCore;
+global using System.Net;
