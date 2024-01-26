@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LangVault.Auth", "LangVault
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.Auth", "LangVault.Auth\LangVault.Auth.csproj", "{1682F365-0CC5-4E15-A0B4-AEBDCEC1FE74}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LangVault.Admin", "LangVault.Admin", "{4F90A1AC-3898-4449-B925-53530ECA5F69}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LangVault.Accounting", "LangVault.Accounting", "{4F90A1AC-3898-4449-B925-53530ECA5F69}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LangVault.Notifications", "LangVault.Notifications", "{E03993DF-D0B7-4B2E-B364-6AC618167147}"
 EndProject
@@ -39,7 +39,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.Management.Applic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.Management", "LangVault.Management\LangVault.Management\LangVault.Management.csproj", "{2305E2AE-3594-4CB3-ACF3-A9551BE0B85F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.Admin", "LangVault.Admin\LangVault.Admin\LangVault.Admin.csproj", "{D576F17D-7AFE-420D-B59D-B01B34006E02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.Accounting", "LangVault.Accounting\LangVault.Accounting\LangVault.Accounting.csproj", "{52C4A045-8B80-4FF2-B539-778A460E2E0D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LangVault.EventBus", "LangVault.EventBus", "{03A568A6-0247-4CF5-A684-5B338CC9DD20}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.EventBus", "LangVault.EventBus\LangVault.EventBus\LangVault.EventBus.csproj", "{8E2CA915-E903-492C-AEA7-3DBBDD291245}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,10 +95,14 @@ Global
 		{2305E2AE-3594-4CB3-ACF3-A9551BE0B85F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2305E2AE-3594-4CB3-ACF3-A9551BE0B85F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2305E2AE-3594-4CB3-ACF3-A9551BE0B85F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D576F17D-7AFE-420D-B59D-B01B34006E02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D576F17D-7AFE-420D-B59D-B01B34006E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D576F17D-7AFE-420D-B59D-B01B34006E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D576F17D-7AFE-420D-B59D-B01B34006E02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52C4A045-8B80-4FF2-B539-778A460E2E0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52C4A045-8B80-4FF2-B539-778A460E2E0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52C4A045-8B80-4FF2-B539-778A460E2E0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52C4A045-8B80-4FF2-B539-778A460E2E0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E2CA915-E903-492C-AEA7-3DBBDD291245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E2CA915-E903-492C-AEA7-3DBBDD291245}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E2CA915-E903-492C-AEA7-3DBBDD291245}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E2CA915-E903-492C-AEA7-3DBBDD291245}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -111,7 +119,8 @@ Global
 		{0435B3F1-E0DB-403C-ADE4-423964575F74} = {185DBF15-3F0A-4C56-8C25-4866D7EF2A7D}
 		{88B7E8FB-104A-4616-9B85-1B35439C8E5B} = {185DBF15-3F0A-4C56-8C25-4866D7EF2A7D}
 		{2305E2AE-3594-4CB3-ACF3-A9551BE0B85F} = {185DBF15-3F0A-4C56-8C25-4866D7EF2A7D}
-		{D576F17D-7AFE-420D-B59D-B01B34006E02} = {4F90A1AC-3898-4449-B925-53530ECA5F69}
+		{52C4A045-8B80-4FF2-B539-778A460E2E0D} = {4F90A1AC-3898-4449-B925-53530ECA5F69}
+		{8E2CA915-E903-492C-AEA7-3DBBDD291245} = {03A568A6-0247-4CF5-A684-5B338CC9DD20}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AAFF96FB-7634-4141-9D51-916C5ECDB84E}
