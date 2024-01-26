@@ -1,0 +1,6 @@
+@LangVault.Accounting_HostAddress = http://localhost:5035
+
+GET {{LangVault.Accounting_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
