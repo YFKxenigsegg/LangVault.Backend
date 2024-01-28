@@ -5,23 +5,51 @@ networks:
     driver: bridge
 
 services:
-  langvault.admin:
-    image: docker.io/library/langvault.admin
-    container_name: Admin
-    depends_on:
-      - "langvault.db"
+  langvault.apigateway:
+    image: docker.io/library/langvault.apigateway
+    container_name: langvault.apigateway
     ports:
-      - "8081:80"
+      - 4201:80
+    build:
+      context: .
+      dockerfile: LangVault.ApiGateway/Dockerfile
+    networks:
+      - dev
+
+  langvault.accounting:
+    image: docker.io/library/langvault.accounting
+    container_name: langvault.accounting
+    # depends_on:
+    #   - "langvault.db"
+    ports:
+      - 4203:80
     restart: always
     build:
       context: .
-      dockerfile: LangVault.Admin/Dockerfile
+      dockerfile: LangVault.Accounting/LangVault.Accounting/Dockerfile
+    networks:
+      - dev
+
+  langvault.management:
+    tty: true
+    image: docker.io/library/langvault.management
+    container_name: langvault.management
+    environment:
+      - ConnectionStrings__DefaultConnection=host=langvault.db;database=LangVault;username=postgres;password=postgre123
+    depends_on:
+      - langvault.db
+    ports:
+      - 4205:80
+    restart: always
+    build:
+      context: .
+      dockerfile: LangVault.Management/LangVault.Management/Dockerfile
     networks:
       - dev
 
   langvault.db:
     image: postgres:latest
-    container_name: Database
+    container_name: langvault.db
     environment:
       - POSTGRES_DB=LangVault
       - POSTGRES_USER=postgres
@@ -31,10 +59,12 @@ services:
     ports:
       - 5432:5432
     restart: always
+    networks:
+      - dev
 
   langvault.mq:
     image: rabbitmq:3.12.10-management
-    container_name: Queue
+    container_name: langvault.mq
     hostname: langvault-queue
     volumes:
       - ./.containers/queue/data:/var/lib/rabbitmq

@@ -10,7 +10,7 @@ public static class DependencyInjection
         services.AddSingleton<AuditableInterceptor>();
         services.AddDbContextFactory<ApplicationDbContext>((sp, options) =>
             options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"),
-            x => x.MigrationsAssembly("Infrastructure.Migrations"))
+            x => x.MigrationsAssembly(typeof(Migrations.DependencyInjection).Assembly.FullName))
             .AddInterceptors(sp.GetRequiredService<AuditableInterceptor>()));
         services.AddScoped(options =>
             options.GetRequiredService<IDbContextFactory<ApplicationDbContext>>()
