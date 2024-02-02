@@ -30,10 +30,10 @@ services:
     networks:
       - dev
 
-  langvault.management:
+  langvault.cardmanager:
     tty: true
-    image: docker.io/library/langvault.management
-    container_name: langvault.management
+    image: docker.io/library/langvault.cardmanager
+    container_name: langvault.cardmanager
     environment:
       - ConnectionStrings__DefaultConnection=host=langvault.db;database=LangVault;username=postgres;password=postgre123
     depends_on:
@@ -43,7 +43,7 @@ services:
     restart: always
     build:
       context: .
-      dockerfile: LangVault.Management/LangVault.Management/Dockerfile
+      dockerfile: LangVault.CardManager/LangVault.CardManager/Dockerfile
     networks:
       - dev
 

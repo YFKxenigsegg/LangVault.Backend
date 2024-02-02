@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LangVault.Accounting", "Lan
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LangVault.Notifications", "LangVault.Notifications", "{E03993DF-D0B7-4B2E-B364-6AC618167147}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LangVault.Management", "LangVault.Management", "{185DBF15-3F0A-4C56-8C25-4866D7EF2A7D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LangVault.CardManager", "LangVault.CardManager", "{185DBF15-3F0A-4C56-8C25-4866D7EF2A7D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Telegram", "Telegram", "{A4F06262-3533-4DED-A7C0-252E8B5C1D0B}"
 EndProject
@@ -25,17 +25,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LangVault.ApiGateway", "Lan
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.ApiGateway", "LangVault.ApiGateway\LangVault.ApiGateway.csproj", "{3E366851-2B53-4CB3-B581-645CE5255EB0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.Management.Domain", "LangVault.Management\LangVault.Management.Domain\LangVault.Management.Domain.csproj", "{643E079A-486A-4D6B-8343-179ADC706124}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.CardManager.Domain", "LangVault.CardManager\LangVault.CardManager.Domain\LangVault.CardManager.Domain.csproj", "{643E079A-486A-4D6B-8343-179ADC706124}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.Management.Infrastructure.Migrations", "LangVault.Management\LangVault.Management.Infrastructure.Migrations\LangVault.Management.Infrastructure.Migrations.csproj", "{DD2DD35C-353F-4D3E-A4BF-CBFCF5F67C68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.CardManager.Infrastructure.Migrations", "LangVault.CardManager\LangVault.CardManager.Infrastructure.Migrations\LangVault.CardManager.Infrastructure.Migrations.csproj", "{DD2DD35C-353F-4D3E-A4BF-CBFCF5F67C68}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.Management.Infrastructure", "LangVault.Management\LangVault.Management.Infrastructure\LangVault.Management.Infrastructure.csproj", "{C3DA7988-6103-480D-B09E-F8010D882555}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.CardManager.Infrastructure", "LangVault.CardManager\LangVault.CardManager.Infrastructure\LangVault.CardManager.Infrastructure.csproj", "{C3DA7988-6103-480D-B09E-F8010D882555}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.Management.Tests", "LangVault.Management\LangVault.Management.Tests\LangVault.Management.Tests.csproj", "{0435B3F1-E0DB-403C-ADE4-423964575F74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.CardManager.Tests", "LangVault.CardManager\LangVault.CardManager.Tests\LangVault.CardManager.Tests.csproj", "{0435B3F1-E0DB-403C-ADE4-423964575F74}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.Management.Application", "LangVault.Management\LangVault.Management.Application\LangVault.Management.Application.csproj", "{88B7E8FB-104A-4616-9B85-1B35439C8E5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.CardManager.Application", "LangVault.CardManager\LangVault.CardManager.Application\LangVault.CardManager.Application.csproj", "{88B7E8FB-104A-4616-9B85-1B35439C8E5B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.Management", "LangVault.Management\LangVault.Management\LangVault.Management.csproj", "{2305E2AE-3594-4CB3-ACF3-A9551BE0B85F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.CardManager", "LangVault.CardManager\LangVault.CardManager\LangVault.CardManager.csproj", "{2305E2AE-3594-4CB3-ACF3-A9551BE0B85F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.Accounting", "LangVault.Accounting\LangVault.Accounting\LangVault.Accounting.csproj", "{52C4A045-8B80-4FF2-B539-778A460E2E0D}"
 EndProject
@@ -43,11 +43,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LangVault.EventBus", "LangV
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.EventBus", "LangVault.EventBus\LangVault.EventBus\LangVault.EventBus.csproj", "{8E2CA915-E903-492C-AEA7-3DBBDD291245}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LangVault.Notifications.Telegram", "..\LangVault.Notifications.Telegram\LangVault.Notifications.Telegram.csproj", "{5ABE85AD-65B7-46FA-B27C-521AC247E439}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.Notifications.Telegram", "..\LangVault.Notifications.Telegram\LangVault.Notifications.Telegram.csproj", "{5ABE85AD-65B7-46FA-B27C-521AC247E439}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LangVault.Shared", "LangVault.Shared", "{14417989-39C9-4FBA-9AF2-13E32DBACF56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LangVault.Shared", "LangVault.Shared\LangVault.Shared.csproj", "{4D5CF3DB-416B-49CD-857F-742FD69381DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangVault.Shared", "LangVault.Shared\LangVault.Shared.csproj", "{4D5CF3DB-416B-49CD-857F-742FD69381DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

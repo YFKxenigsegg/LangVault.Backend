@@ -1,7 +1,7 @@
 ﻿{
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/management",
+      "DownstreamPathTemplate": "/api/CardManager",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -9,7 +9,7 @@
           "Port": 44337
         }
       ],
-      "UpstreamPathTemplate": "/gateway/management",
+      "UpstreamPathTemplate": "/gateway/CardManager",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
     {

@@ -1,5 +1,5 @@
 ﻿namespace LangVault.ApiGateway.Services;
-public interface IManagementService
+public interface ICardManagerService
 {
 
 }

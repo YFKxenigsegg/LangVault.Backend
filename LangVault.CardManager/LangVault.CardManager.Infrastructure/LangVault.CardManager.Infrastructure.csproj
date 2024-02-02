@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\LangVault.CardManager.Domain\LangVault.CardManager.Domain.csproj" />
+		<ProjectReference Include="..\LangVault.CardManager.Infrastructure.Migrations\LangVault.CardManager.Infrastructure.Migrations.csproj" />
+	</ItemGroup>
+
+</Project>

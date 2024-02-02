@@ -1,0 +1,17 @@
+﻿global using AutoMapper;
+global using AutoMapper.QueryableExtensions;
+global using FluentValidation;
+global using FluentValidation.Results;
+global using LangVault.CardManager.Application.Common.Exceptions;
+global using LangVault.CardManager.Application.Common.Mappings;
+global using LangVault.CardManager.Application.Common.Models;
+global using LangVault.CardManager.Domain.Consts;
+global using LangVault.CardManager.Domain.Entities;
+global using LangVault.CardManager.Domain.Entities.Base;
+global using LangVault.CardManager.Domain.Enums;
+global using LangVault.CardManager.Infrastructure;
+global using LangVault.EventBus;
+global using LangVault.EventBus.Events.CardManager;
+global using MediatR;
+global using Microsoft.EntityFrameworkCore;
+global using System.Net;
