@@ -47,6 +47,18 @@ services:
     networks:
       - dev
 
+  # langvault.notifications.telegram:
+  #   image: docker.io/library/langvault.notifications.telegram
+  #   container_name: langvault.notifications.telegram
+  #   ports:
+  #     - 4207:80
+  #   restart: always
+  #   build:
+  #     context: .
+  #     dockerfile: LangVault.Notifications/Telegram/Dockerfile
+  #   networks:
+  #     - dev
+
   langvault.db:
     image: postgres:latest
     container_name: langvault.db

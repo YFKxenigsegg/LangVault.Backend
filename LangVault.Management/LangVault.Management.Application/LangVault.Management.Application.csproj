@@ -23,6 +23,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\LangVault.EventBus\LangVault.EventBus\LangVault.EventBus.csproj" />
 		<ProjectReference Include="..\LangVault.Management.Infrastructure\LangVault.Management.Infrastructure.csproj" />
 	</ItemGroup>
 

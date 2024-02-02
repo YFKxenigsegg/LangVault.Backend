@@ -1,7 +1,4 @@
 {
-  "ConnectionStrings": {
-    "DefaultConnection": "host=localhost;database=LangVault;username=postgres;password=postgre123"
-  },
   "Logging": {
     "LogLevel": {
       "Default": "Information",
@@ -13,5 +10,6 @@
     "Username": "guest",
     "Password": "guest",
     "Port": 5672
-  }
+  },
+  "AllowedHosts": "*"
 }
