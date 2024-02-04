@@ -1,5 +1,3 @@
-using LangVault.Notifications.Telegram;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
